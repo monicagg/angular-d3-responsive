@@ -69,11 +69,11 @@ export class RadialChartComponent implements OnChanges {
     svg.append("g")
       .selectAll("g")
       .data(series)
-      .join("g")
+      .enter().append("g")
         .attr("fill", <any>(d => z(d.key)))
       .selectAll("path")
       .data(d => d)
-      .join("path")
+      .enter().append("path")
         .attr("d", <any>arc);
   
     // xAxis
@@ -115,7 +115,7 @@ export class RadialChartComponent implements OnChanges {
             .attr("dy", "0.35em")
             .attr("stroke", "#fff")
             .attr("stroke-width", 5)
-            .text(y.tickFormat(5, "s"))
+            .text(y.tickFormat(5, "%"))
          .clone(true)
             .attr("fill", "#000")
             .attr("stroke", "none")))

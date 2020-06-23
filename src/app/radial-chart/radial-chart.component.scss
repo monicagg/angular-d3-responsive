@@ -1,18 +1,13 @@
 app-radial-chart {
-   width: 70%;
-   height: 400px;
    #radialchart {
         height: inherit;
         width: inherit;
-
         .bar {
             fill: steelblue;
         }
-        
         .bar:hover {
             fill: navy;
         }
-        
         .axis--x path {
             display: none;
         }
