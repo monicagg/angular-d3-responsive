@@ -23,7 +23,7 @@ export class RadialChartComponent implements OnChanges {
   }
 
   private createChart(): void {
-    d3.select('svg').remove();
+    d3.select('#radialchart svg').remove();
 
     const element = this.chartContainer.nativeElement;
     const data = this.data;

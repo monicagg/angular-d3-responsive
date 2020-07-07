@@ -15,7 +15,7 @@ export class BarChartComponent implements OnChanges {
   @Input()
   data: DataModel[];
 
-  margin = {top: 20, right: 20, bottom: 30, left: 40};
+  margin = {top: 20, right: 10, bottom: 20, left: 40};
 
   constructor() { }
 
@@ -30,7 +30,7 @@ export class BarChartComponent implements OnChanges {
   }
 
   private createChart(): void {
-    d3.select('svg').remove();
+    d3.select('#chart svg').remove();
 
     const element = this.chartContainer.nativeElement;
     const data = this.data;
